@@ -88,6 +88,7 @@ section[id], [id].card { scroll-margin-top: 80px; }
 .numbers li { background: var(--card); padding: 18px 18px 16px; }
 .numbers strong { display: block; font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.4rem); font-weight: 600; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
 .numbers span { display: block; margin-top: 6px; font-size: 0.95rem; color: var(--muted); line-height: 1.4; }
+.numbers span b { color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; }
 
 .chips-h { font-size: 1.35rem; margin: 40px 0 14px; }
 .chips { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
