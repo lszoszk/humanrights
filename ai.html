@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Use with your AI assistant · Human Rights Law as Data</title>
+<meta name="description" content="Add the UN Human Rights Database, UHRI+, HUDOC Researcher and UN Travaux Préparatoires to Claude, ChatGPT or another MCP client, and check the answer against the source.">
+<link rel="canonical" href="https://lszoszk.github.io/humanrights/ai.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Use with your AI assistant · Human Rights Law as Data">
+<meta property="og:description" content="Add the UN Human Rights Database, UHRI+, HUDOC Researcher and UN Travaux Préparatoires to Claude, ChatGPT or another MCP client, and check the answer against the source.">
+<meta property="og:url" content="https://lszoszk.github.io/humanrights/ai.html">
+<meta property="og:image" content="https://lszoszk.github.io/humanrights/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%239a2a22'/%3E%3Ctext x='32' y='47' font-family='Georgia,serif' font-size='44' text-anchor='middle' fill='%23fff'%3E%C2%B6%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+<script src="statystyki.js" defer></script>
+</head>
+<body class="sub">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">¶</span> Human Rights Law as Data</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="index.html#tools">Tools</a></li>
+        <li><a href="ai.html" aria-current="page">Use with AI</a></li>
+        <li><a href="about.html#cite">Cite</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="page">
+<section class="ai" aria-labelledby="ai-h">
+  <div class="wrap">
+    <h1 id="ai-h">Use with your AI assistant</h1>
+    <div class="prose">
+      <p>Four of the tools can also be added to Claude, ChatGPT or another assistant that supports the Model Context Protocol (MCP). The connectors are hosted, so there is nothing to install: you add one address, and the assistant searches the same corpus as the website. The connector returns the text verbatim, with the UN symbol and paragraph (or the case name, application number and §), so the assistant can quote it instead of reconstructing it from memory and you can check every quotation.</p>
+    </div>
+
+    <!-- TODO (later): one combined MCP address for all corpora. The addresses below use the VM's IP until humanrights.amu.edu.pl has a TLS certificate (checked 10.11.2026: the IP has a valid Let's Encrypt IP certificate; the domain still fails, no matching name). -->
+    <ul class="connectors">
+      <li class="connector">
+        <h2>UN Human Rights Database and UHRI+</h2>
+        <p class="conn-scope">General Comments, Views, Special Procedures reports and recommendations to States (one connector)</p>
+        <div class="addr">
+          <code id="addr-unhrdb">https://150.254.115.204/unhrdb-mcp-rpc/mcp</code>
+          <button class="btn small" type="button" data-copy="#addr-unhrdb" data-stat="copy-unhrdb">Copy<span class="vh"> the address of the UN Human Rights Database and UHRI+ connector</span></button>
+          <a class="btn small ghost" href="cursor://anysphere.cursor-deeplink/mcp/install?name=unhrdb&amp;config=eyJ1cmwiOiJodHRwczovLzE1MC4yNTQuMTE1LjIwNC91bmhyZGItbWNwLXJwYy9tY3AifQ==">Add to Cursor<span class="vh">: UN Human Rights Database and UHRI+</span></a>
+          <a class="btn small ghost" href="https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522unhrdb%2522%252C%2522type%2522%253A%2522http%2522%252C%2522url%2522%253A%2522https%253A%252F%252F150.254.115.204%252Funhrdb-mcp-rpc%252Fmcp%2522%257D">Add to VS Code<span class="vh">: UN Human Rights Database and UHRI+</span></a>
+        </div>
+      </li>
+      <li class="connector">
+        <h2>HUDOC Researcher</h2>
+        <p class="conn-scope">Judgments of the European Court of Human Rights</p>
+        <div class="addr">
+          <code id="addr-echr">https://150.254.115.204/echr-api/mcp</code>
+          <button class="btn small" type="button" data-copy="#addr-echr" data-stat="copy-echr">Copy<span class="vh"> the address of the HUDOC Researcher connector</span></button>
+          <a class="btn small ghost" href="cursor://anysphere.cursor-deeplink/mcp/install?name=echr&amp;config=eyJ1cmwiOiJodHRwczovLzE1MC4yNTQuMTE1LjIwNC9lY2hyLWFwaS9tY3AifQ==">Add to Cursor<span class="vh">: HUDOC Researcher</span></a>
+          <a class="btn small ghost" href="https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522echr%2522%252C%2522type%2522%253A%2522http%2522%252C%2522url%2522%253A%2522https%253A%252F%252F150.254.115.204%252Fechr-api%252Fmcp%2522%257D">Add to VS Code<span class="vh">: HUDOC Researcher</span></a>
+        </div>
+      </li>
+      <li class="connector">
+        <h2>UN Travaux Préparatoires</h2>
+        <p class="conn-scope">Drafting records of the UDHR, the ICCPR and the ICESCR</p>
+        <div class="addr">
+          <code id="addr-travaux">https://150.254.115.204/travaux-api/mcp</code>
+          <button class="btn small" type="button" data-copy="#addr-travaux" data-stat="copy-travaux">Copy<span class="vh"> the address of the UN Travaux Préparatoires connector</span></button>
+          <a class="btn small ghost" href="cursor://anysphere.cursor-deeplink/mcp/install?name=travaux&amp;config=eyJ1cmwiOiJodHRwczovLzE1MC4yNTQuMTE1LjIwNC90cmF2YXV4LWFwaS9tY3AifQ==">Add to Cursor<span class="vh">: UN Travaux Préparatoires</span></a>
+          <a class="btn small ghost" href="https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522travaux%2522%252C%2522type%2522%253A%2522http%2522%252C%2522url%2522%253A%2522https%253A%252F%252F150.254.115.204%252Ftravaux-api%252Fmcp%2522%257D">Add to VS Code<span class="vh">: UN Travaux Préparatoires</span></a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="prose">
+      <p class="callout">However, the Free plan of Claude allows only one custom connector, so choose the corpus you need most. One address for all the corpora is planned.</p>
+      <p>HRC Voting, however, runs as an MCP server on your own computer (it works offline), and <a href="https://github.com/lszoszk/mcp-hrc-voting">its repository</a> explains how to install it.</p>
+      <section class="warn" aria-labelledby="ai-conf-h">
+        <h2 id="ai-conf-h">Confidential text</h2>
+        <p>The conversation with an assistant goes to the company that runs it (e.g., Anthropic for Claude, OpenAI for ChatGPT), so do not put confidential text into it, such as a draft submission or a client's file. The connectors themselves receive only what the assistant sends them in a search (the search terms or the citation to look up).</p>
+      </section>
+    </div>
+
+    <div class="steps">
+      <section class="step" aria-labelledby="step-claude">
+        <h2 id="step-claude">Claude (web and desktop app)</h2>
+        <p>Open Customize and then Connectors, click Add and choose Add custom connector. Give it a name, paste the address, choose No sign in and click Add. In a new chat, switch the connector on in the tools menu. On Team and Enterprise plans an owner adds the connector first in Organization settings, and members then click Connect.</p>
+        <p class="src"><a href="https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp">Claude help centre<span class="vh">: custom connectors</span></a></p>
+      </section>
+      <!-- Checked 10.11.2026 against OpenAI's developer documentation ("Connect and test your plugin"): custom MCP servers are now added as plugins. The page names no plans, only "account and workspace policies". -->
+      <section class="step" aria-labelledby="step-chatgpt">
+        <h2 id="step-chatgpt">ChatGPT</h2>
+        <p>Open Plugins, select the plus button and then Add custom MCP server. Give it a name, paste the address as the MCP server URL, choose no authentication, confirm the risk warning and select Create as a plugin. In a new chat, type @ and choose it. Whether you can add a custom server depends on your plan and, on a work account, on the settings of your workspace.</p>
+        <p class="src"><a href="https://developers.openai.com/plugins/deploy/connect-chatgpt">OpenAI documentation<span class="vh">: connecting a custom MCP server in ChatGPT</span></a></p>
+      </section>
+      <section class="step" aria-labelledby="step-cc">
+        <h2 id="step-cc">Claude Code</h2>
+        <p>Run the command below in a terminal, and the connector is available in every project.</p>
+        <div class="cmd">
+          <pre tabindex="0" role="region" aria-label="Claude Code commands"><code id="cmd-cc">claude mcp add --transport http unhrdb https://150.254.115.204/unhrdb-mcp-rpc/mcp --scope user
+claude mcp add --transport http echr https://150.254.115.204/echr-api/mcp --scope user
+claude mcp add --transport http travaux https://150.254.115.204/travaux-api/mcp --scope user</code></pre>
+          <button class="btn small" type="button" data-copy="#cmd-cc" data-stat="copy-claude-code">Copy<span class="vh"> the Claude Code commands</span></button>
+        </div>
+      </section>
+      <section class="step" aria-labelledby="step-ide">
+        <h2 id="step-ide">Cursor and VS Code</h2>
+        <p>The buttons next to each address open the editor and add the connector after you confirm.</p>
+      </section>
+    </div>
+
+    <h2 class="prompts-h" id="prompts-h">Example prompts</h2>
+    <ul class="prompts" aria-labelledby="prompts-h">
+      <!-- Prompts on peaceful assembly (10.11.2026), each checked against its corpus: GC 37 ¶40 (unhrdb); Alekseyev v. Russia, no. 4916/07, and Bączkowski and Others v. Poland, no. 1543/06 (echr); 15 speeches on "democratic society" under ICCPR art. 21, 1949–1952 (travaux); 118 UPR recommendations of 2026 with the theme (UHRI). -->
+      <li><p id="p1">What did the Human Rights Committee say in General Comment No. 37 about restrictions on peaceful assembly that must be “necessary in a democratic society”? Quote the paragraphs with their numbers.</p>
+        <button class="btn small" type="button" data-copy="#p1" data-stat="copy-prompt-1">Copy<span class="vh"> the first prompt</span></button></li>
+      <li><p id="p2">Find the judgments of the European Court of Human Rights on bans of marches and pride parades, and quote the key paragraph with the case name, application number and paragraph.</p>
+        <button class="btn small" type="button" data-copy="#p2" data-stat="copy-prompt-2">Copy<span class="vh"> the second prompt</span></button></li>
+      <li><p id="p3">What did the delegations in the Commission on Human Rights say between 1949 and 1952 about the words “in a democratic society” in the article that became Article 21 of the ICCPR? Cite each speech by UN symbol and page or paragraph.</p>
+        <button class="btn small" type="button" data-copy="#p3" data-stat="copy-prompt-3">Copy<span class="vh"> the third prompt</span></button></li>
+      <li><p id="p4">Which recommendations on the right of peaceful assembly were made in the Universal Periodic Review in 2026? Quote five of them with the UN symbol, the State under review and the recommending State.</p>
+        <button class="btn small" type="button" data-copy="#p4" data-stat="copy-prompt-4">Copy<span class="vh"> the fourth prompt</span></button></li>
+    </ul>
+
+    <section class="check-step" aria-labelledby="check-h">
+      <h2 id="check-h">Check the answer</h2>
+      <p>The assistant writes its own answer, and it may still misquote a paragraph or attach a quotation to the wrong one. For this reason, paste the answer into Check before you use it, which compares every quotation and citation with the source (<a href="https://lszoszk.github.io/generalcomments/#check">Check in the UN Human Rights Database</a> for UN documents, <a href="https://lszoszk.github.io/ECHR-Dashboard/check.html">HUDOC Researcher Check</a> for the judgments of the Court and <a href="https://lszoszk.github.io/travaux-preparatoires/#view=check">Travaux Check</a> for the drafting records). The first two keep your text in the browser and fetch only the identifiers of the cited documents, while Travaux Check reads the text on its server and keeps it nowhere.</p>
+    </section>
+
+    <!-- Later: a 90 s film on the connectors goes here (the placeholder was removed for the launch on 10.11.2026). -->
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-short">
+    <ul class="foot-links">
+      <li><a href="about.html">About and data</a></li>
+      <li><a href="about.html#cite">How to cite</a></li>
+      <li><a href="about.html#accessibility">Accessibility</a></li>
+      <li><a href="about.html#privacy">Privacy</a></li>
+    </ul>
+    <p>© 2026 <a href="https://lszoszk.github.io/">Łukasz Szoszkiewicz</a> · Adam Mickiewicz University, Poznań</p>
+  </div>
+</footer>
+
+<div class="vh" role="status" aria-live="polite" id="live"></div>
+</body>
+</html>

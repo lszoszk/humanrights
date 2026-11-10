@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About the tools · Human Rights Law as Data</title>
+<meta name="description" content="How the five tools work and where they fall short, with their data, code, DOIs, citation, accessibility statement and privacy note.">
+<link rel="canonical" href="https://lszoszk.github.io/humanrights/about.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About the tools · Human Rights Law as Data">
+<meta property="og:description" content="How the five tools work and where they fall short, with their data, code, DOIs, citation, accessibility statement and privacy note.">
+<meta property="og:url" content="https://lszoszk.github.io/humanrights/about.html">
+<meta property="og:image" content="https://lszoszk.github.io/humanrights/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%239a2a22'/%3E%3Ctext x='32' y='47' font-family='Georgia,serif' font-size='44' text-anchor='middle' fill='%23fff'%3E%C2%B6%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script src="statystyki.js" defer></script>
+</head>
+<body class="sub">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">¶</span> Human Rights Law as Data</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="index.html#tools">Tools</a></li>
+        <li><a href="ai.html">Use with AI</a></li>
+        <li><a href="about.html#cite">Cite</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="page about">
+  <div class="wrap">
+  <h1>About the tools</h1>
+
+  <section id="principles" aria-labelledby="principles-h">
+    <h2 id="principles-h">Three principles</h2>
+    <ol class="principles">
+      <li>
+        <h3 id="why-1">No answer is generated</h3>
+        <p>Every result is the verbatim text of the document, with its UN symbol and paragraph (or the case name and §). Search by meaning (Ask in the UN Human Rights Database and in UN Travaux Préparatoires, Semantic Search in HUDOC Researcher) uses a model only to find and order passages, and it writes nothing. This principle covers the tools themselves, while an <a href="ai.html">AI assistant</a> connected to them writes its own answer, which is why that answer should go through <a href="ai.html#check-h">Check</a>. AI helped to write the software and to prepare the data (see the <a href="#colophon">colophon</a>), and some of the data is read or tagged by machine (e.g., the scans of 1946–66 and the article tags in UN Travaux Préparatoires). In such cases the tool says so (UN Travaux Préparatoires links every passage to its scan and gives the measured error on its About page), and a machine translation (e.g., of the judgments HUDOC publishes only in French) is labelled as such.</p>
+      </li>
+      <li>
+        <h3 id="why-2">The paragraph is the unit</h3>
+        <p>The tools search and show the smallest citable unit (a paragraph, a speech, a vote or a recommendation), and one click copies it with its full citation. Paragraph numbers are the ones the source itself uses, so a citation taken from a tool can be found in the original document.</p>
+      </li>
+      <li>
+        <h3 id="why-3">One click from the source</h3>
+        <p>Each result links to the authoritative record: the Official Document System and the UN Digital Library, the databases of the Office of the High Commissioner for Human Rights (OHCHR) or, for the European Court, HUDOC. A legal argument should cite that record, since the tools are independent research resources, not affiliated with the United Nations or the Council of Europe, and they are not legal advice. Moreover, the code is on GitHub, the curated datasets are on Hugging Face and Zenodo with DOIs, and each tool gives the date or the version of its data on its own pages (e.g., in its About page or in the citation it suggests).</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="data" aria-labelledby="data-h">
+    <h2 id="data-h">Data and code</h2>
+    <ul class="datalist">
+      <li><a class="dl-name" href="https://lszoszk.github.io/generalcomments/">UN Human Rights Database</a> <span class="dl-links"><a href="https://huggingface.co/datasets/lszoszk/treaty-bodies-general-comments">Dataset<span class="vh"> of UN Human Rights Database</span></a> · <a href="https://github.com/lszoszk/generalcomments">Source code<span class="vh"> of UN Human Rights Database</span></a> · <a href="https://github.com/lszoszk/mcp-unhrdb">MCP server<span class="vh"> of UN Human Rights Database</span></a></span></li>
+      <li><a class="dl-name" href="https://lszoszk.github.io/UnitedNations_recommendations/">UHRI+</a> <span class="dl-links"><a href="https://huggingface.co/datasets/lszoszk/uhri-recommendations">Dataset<span class="vh"> of UHRI+</span></a> · <a href="https://github.com/lszoszk/UnitedNations_recommendations">Source code<span class="vh"> of UHRI+</span></a> · <a href="https://github.com/lszoszk/mcp-unhrdb">MCP server<span class="vh"> of UHRI+</span></a></span></li>
+      <li><a class="dl-name" href="https://lszoszk.github.io/hrc-voting/">HRC Voting</a> <span class="dl-links"><a href="https://doi.org/10.5281/zenodo.21281232">Dataset<span class="vh"> of HRC Voting</span></a> · <a href="https://github.com/lszoszk/hrc-voting">Source code<span class="vh"> of HRC Voting</span></a> · <a href="https://github.com/lszoszk/mcp-hrc-voting">MCP server<span class="vh"> of HRC Voting</span></a></span></li>
+      <li><a class="dl-name" href="https://lszoszk.github.io/ECHR-Dashboard/">HUDOC Researcher</a> <span class="dl-links"><a href="https://huggingface.co/datasets/lszoszk/ecthr-judgments">Dataset<span class="vh"> of HUDOC Researcher</span></a> · <a href="https://github.com/lszoszk/ECHR-Dashboard">Source code<span class="vh"> of HUDOC Researcher</span></a> · <a href="https://github.com/lszoszk/mcp-echr">MCP server<span class="vh"> of HUDOC Researcher</span></a></span></li>
+      <li><a class="dl-name" href="https://lszoszk.github.io/travaux-preparatoires/">UN Travaux Préparatoires</a> <span class="dl-links"><a href="https://github.com/lszoszk/travaux-preparatoires">Source code<span class="vh"> of UN Travaux Préparatoires</span></a> · <a href="https://lszoszk.github.io/travaux-preparatoires/#view=about&amp;part=mcp">MCP server<span class="vh"> of UN Travaux Préparatoires</span></a></span></li>
+    </ul>
+  </section>
+
+  <section id="cite" aria-labelledby="cite-h">
+    <h2 id="cite-h">How to cite</h2>
+    <p>Cite the document you quote by its own reference (for instance, E/C.12/1999/10, para.&nbsp;13, or <i>Ponomaryovi v. Bulgaria</i>, no.&nbsp;5335/05, §&nbsp;63), and the tool you used by its Zenodo DOI, with the version or the date of access. The Zenodo page of each tool exports the reference in BibTeX and other formats.</p>
+    <ul class="dois">
+      <li>UN Human Rights Database: <a href="https://doi.org/10.5281/zenodo.10495719">10.5281/zenodo.10495719</a></li>
+      <li>UHRI+: <a href="https://doi.org/10.5281/zenodo.21319464">10.5281/zenodo.21319464</a></li>
+      <li>HRC Voting: <a href="https://doi.org/10.5281/zenodo.21281232">10.5281/zenodo.21281232</a></li>
+      <li>HUDOC Researcher: <a href="https://doi.org/10.5281/zenodo.21319703">10.5281/zenodo.21319703</a></li>
+      <li>UN Travaux Préparatoires: <a href="https://doi.org/10.5281/zenodo.23940406">10.5281/zenodo.23940406</a></li>
+      <li>MCP server for the UN Human Rights Database and UHRI+: <a href="https://doi.org/10.5281/zenodo.21319705">10.5281/zenodo.21319705</a></li>
+    </ul>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">Who built it</h2>
+    <p>Human Rights Law as Data gathers the research tools built by <a href="https://lszoszk.github.io/">Łukasz Szoszkiewicz</a> at Adam Mickiewicz University in Poznań (the General Comments in the UN Human Rights Database together with Zuzanna Kowalska, and HUDOC Researcher together with Sebastian Marcisz).</p>
+  </section>
+
+  <section id="colophon" aria-labelledby="colophon-h">
+    <h2 id="colophon-h">Colophon</h2>
+    <p>The site is plain HTML, CSS and a little JavaScript, without a framework or external fonts, hosted on GitHub Pages. The tools and this site were built by Łukasz Szoszkiewicz with the help of AI coding assistants (mainly Claude Code), while the choice of sources, the way they are divided and cited and the checks of the data are his. The films were made in the same way, from real screenshots of the tools, with a synthetic voice (ElevenLabs) and burned-in subtitles.</p>
+  </section>
+
+  <section id="accessibility" aria-labelledby="a11y-h">
+    <h2 id="a11y-h">Accessibility</h2>
+    <p>This site aims to meet the Web Content Accessibility Guidelines (WCAG) 2.1 at level AA. Its three pages were checked on 8 November 2026 with the keyboard alone, at phone and desktop widths, for colour contrast and with an automated test. The films have burned-in English subtitles and a transcript, and the narration describes what is shown on the screen. However, some parts are not ready yet (the films on three tools, on the connectors and in the hero), and the five tools are separate applications with their own level of accessibility. If something on this site does not work for you, please write to <a href="mailto:l.szoszkiewicz@amu.edu.pl">l.szoszkiewicz@amu.edu.pl</a>.</p>
+  </section>
+
+  <section id="privacy" aria-labelledby="privacy-h">
+    <h2 id="privacy-h">Privacy</h2>
+    <p>The site counts visits with <a href="https://www.goatcounter.com/">GoatCounter</a>, an open-source counter that sets no cookies and stores nothing in your browser, which is why there is no cookie banner. It sends the address of the page (without any query), the site you came from, the size of your screen, the label of a button or the domain of a link you click and how long the page stays open (1, 5, 15 or 45 minutes). Moreover, it does not run when your browser sends Do Not Track or Global Privacy Control.</p>
+  </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-short">
+    <ul class="foot-links">
+      <li><a href="about.html">About and data</a></li>
+      <li><a href="about.html#cite">How to cite</a></li>
+      <li><a href="about.html#accessibility">Accessibility</a></li>
+      <li><a href="about.html#privacy">Privacy</a></li>
+    </ul>
+    <p>© 2026 <a href="https://lszoszk.github.io/">Łukasz Szoszkiewicz</a> · Adam Mickiewicz University, Poznań</p>
+  </div>
+</footer>
+
+</body>
+</html>
