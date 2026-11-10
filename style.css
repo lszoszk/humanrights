@@ -143,6 +143,8 @@ a.chip:hover { border-color: var(--accent); background: #fff; color: var(--ink);
 .film figcaption { font-size: 0.95rem; color: var(--muted); margin-top: 8px; }
 .transcript { max-width: 900px; margin: 14px auto 0; background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 10px 16px; }
 .transcript summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+/* Closed transcripts stay out of sight: the "Read the transcript" link under each film opens them (main.js). */
+.transcript:not([open]) { display: none; }
 .transcript p { margin: 0.8em 0; }
 
 
