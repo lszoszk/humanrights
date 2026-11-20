@@ -30,6 +30,7 @@
     {"@type": "SoftwareApplication", "name": "UN Human Rights Database", "url": "https://lszoszk.github.io/generalcomments/", "applicationCategory": "Research", "operatingSystem": "Web", "isAccessibleForFree": true, "sameAs": "https://doi.org/10.5281/zenodo.10495719", "author": [{"@id": "#lsz"}, {"@type": "Person", "name": "Zuzanna Kowalska"}]},
     {"@type": "SoftwareApplication", "name": "UHRI+", "url": "https://lszoszk.github.io/UnitedNations_recommendations/", "applicationCategory": "Research", "operatingSystem": "Web", "isAccessibleForFree": true, "sameAs": "https://doi.org/10.5281/zenodo.21319464", "author": {"@id": "#lsz"}},
     {"@type": "SoftwareApplication", "name": "HRC Voting", "url": "https://lszoszk.github.io/hrc-voting/", "applicationCategory": "Research", "operatingSystem": "Web", "isAccessibleForFree": true, "sameAs": "https://doi.org/10.5281/zenodo.21281232", "author": {"@id": "#lsz"}},
+    {"@type": "SoftwareApplication", "name": "Banjul Researcher", "url": "https://lszoszk.github.io/banjul-researcher/", "applicationCategory": "Research", "operatingSystem": "Web", "isAccessibleForFree": true, "author": [{"@id": "#lsz"}]},
     {"@type": "SoftwareApplication", "name": "HUDOC Researcher", "url": "https://lszoszk.github.io/ECHR-Dashboard/", "applicationCategory": "Research", "operatingSystem": "Web", "isAccessibleForFree": true, "sameAs": "https://doi.org/10.5281/zenodo.21319703", "author": [{"@id": "#lsz"}, {"@type": "Person", "name": "Sebastian Marcisz"}]},
     {"@type": "SoftwareApplication", "name": "UN Travaux Préparatoires", "url": "https://lszoszk.github.io/travaux-preparatoires/", "applicationCategory": "Research", "operatingSystem": "Web", "isAccessibleForFree": true, "sameAs": "https://doi.org/10.5281/zenodo.23940406", "author": {"@id": "#lsz"}},
     {"@type": "VideoObject", "name": "Challenging a ban on a protest", "description": "A 100-second film that follows one task, challenging a ban on a peaceful assembly, through the four UN tools: Article 21 of the ICCPR, General Comment No. 37 and the jurisprudence of the Human Rights Committee in the UN Human Rights Database, the drafting records in UN Travaux Préparatoires, recommendations in UHRI+, votes in HRC Voting, and the citation check. English subtitles.", "thumbnailUrl": "https://lszoszk.github.io/humanrights/assets/img/hero-film-poster.jpg", "uploadDate": "2026-11-10", "duration": "PT1M42S", "contentUrl": "https://lszoszk.github.io/humanrights/assets/video/hero-film.mp4", "encodingFormat": "video/mp4", "inLanguage": "en", "author": {"@id": "#lsz"}},
@@ -255,7 +256,7 @@
 <section class="tools tools-regional" id="regional" aria-labelledby="regional-h">
   <div class="wrap">
     <h2 id="regional-h">Regional human rights courts</h2>
-    <p class="section-note">For now, HUDOC Researcher covers the European Court of Human Rights. Tools for two more regional courts are under way.</p>
+    <p class="section-note">HUDOC Researcher covers the European Court of Human Rights, and Banjul Researcher the African Commission and the African Court on Human and Peoples’ Rights. A tool for one more regional system is under way.</p>
 
     <ul class="cards">
 
@@ -296,6 +297,24 @@
             <p>When you know only the facts, Semantic Search lets you describe the case in plain words (in any language), and its citation network shows which judgments the Court builds on. Statistics present the whole corpus by year, formation, State, Article and outcome. Research in the age of AI brings new risks, such as invented case names and quotations, and HUDOC Researcher answers them with three tools.</p>
             <p>Check compares every citation and quotation in your draft with the text of the judgment. Through the MCP server and the Claude skill, your own AI assistant quotes the Court verbatim, with the case, application number and paragraph, instead of paraphrasing from memory. HUDOC remains the authoritative source, and HUDOC Researcher is built to keep it one click away from every paragraph.</p>
           </details>
+        </div>
+      </li>
+      <!-- Banjul Researcher (20.11.2026): still image of the live site, no film yet -->
+      <li class="card" id="banjul">
+        <div class="card-media">
+          <img src="assets/img/banjul-shot.jpg" width="1280" height="679" loading="lazy" alt="Banjul Researcher showing 286 paragraphs from 59 documents for the search “free legal assistance” with violation of Article 7; the first result is Hassan Bundala Swaga v Tanzania, paragraph 84, with the search words highlighted.">
+        </div>
+        <div class="card-body">
+          <h3>Banjul Researcher</h3>
+          <p>Decisions of the African Commission and judgments of the African Court on Human and Peoples’ Rights, paragraph by paragraph, with the findings of violation and a citation check.</p>
+          <ul class="metrics">
+            <li><strong>1,041</strong> decisions and opinions</li>
+            <li><strong>47</strong> French-only, in unofficial translation</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://lszoszk.github.io/banjul-researcher/">Open<span class="vh"> Banjul Researcher</span></a>
+            <a class="btn" href="https://lszoszk.github.io/banjul-researcher/#check">Check<span class="vh">: citations of the African Commission and Court</span></a>
+          </div>
         </div>
       </li>
     </ul>
